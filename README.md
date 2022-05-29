@@ -29,7 +29,7 @@ const notifier = new NetworkChangeNotifier({
   updateInterval: 5000,
 });
 
-notifier.on('network-change', () => console.log('internal network interfaces changed'));
+notifier.on('network-change', (currentInterfaces, previousInterfaces) => console.log('internal network interfaces changed'));
 ```
 
 A typical network object looks like this:
@@ -42,6 +42,7 @@ A typical network object looks like this:
   "mac": "00:00:00:00:00:00",
   "internal": true,
   "cidr": "127.0.0.1/8"
+  "interfaceName": "Ethernet"
 }
 ```
 
