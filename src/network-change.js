@@ -49,7 +49,7 @@ module.exports = class NetworkChangeNotifier extends EventEmitter {
       const hasChanges = this.previousInterfaces !== currentInterfaces;
 
       if (hasChanges) {
-        this.emit('network-change');
+        this.emit('network-change', currentInterfaces, this.previousInterfaces);
       }
 
       this.previousInterfaces = currentInterfaces;
