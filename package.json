@@ -1,6 +1,6 @@
 {
-  "name": "@airtame/network-interfaces-change",
-  "version": "1.0.3",
+  "name": "@abductist/network-interfaces-change",
+  "version": "1.0.4",
   "description": "Get notified on any changes in network interfaces",
   "main": "src/network-change.js",
   "directories": {
@@ -32,15 +32,15 @@
     "interface",
     "change"
   ],
-  "author": "Airtame",
+  "author": "Abuctist",
   "contributors": [
-    "Noah Laux (noah@airtame.com)"
+    "Abductist (abductist@gmail.com)"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/airtame/network-interfaces-change/issues"
+    "url": "https://github.com/abductist/network-interfaces-change/issues"
   },
-  "homepage": "https://github.com/airtame/network-interfaces-change#readme",
+  "homepage": "https://github.com/abductist/network-interfaces-change#readme",
   "devDependencies": {
     "chai": "^4.1.2",
     "coveralls": "^3.0.2",
