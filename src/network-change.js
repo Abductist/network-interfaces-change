@@ -62,7 +62,12 @@ module.exports = class NetworkChangeNotifier extends EventEmitter {
    * @returns {string} serialized network interfaces
    */
   getInterfacesSerialized() {
-    const networkInterfaces = os.networkInterfaces();
+    let networkInterfaces = os.networkInterfaces();
+    for (const key in networkInterfaces) {
+      for (let i = 0; i < networkInterfaces[key].length; i++) {
+        networkInterfaces[key][i] = {...networkInterfaces[key][i], interfaceName: key};
+      }
+    }
     const filteredInterfaces = Object.values(networkInterfaces).map(networkInterface => {
       return networkInterface.filter(this.filter);
     });
