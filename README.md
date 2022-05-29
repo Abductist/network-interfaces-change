@@ -15,7 +15,7 @@ const NetworkChangeNotifier = require("@airtame/network-change-notifier");
 
 const notifier = new NetworkChangeNotifier();
 
-notifier.on('network-change', () => console.log('network interfaces changed'));
+notifier.on('network-change', (currentInterfaces, previousInterfaces) => console.log('network interfaces changed'));
 ```
 
 You can provide a filter, to only be notified if any interface changes that matches a certain criteria
